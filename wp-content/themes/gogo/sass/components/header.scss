@@ -1,8 +1,11 @@
 .header {
-  @include wrapper;
-  max-width: 124rem;
-  padding-top: 2.3rem;
-  padding-bottom: 1.3rem;
+  background-color: $color_white;
+  &__wrapper {
+    @include wrapper;
+    max-width: 124rem;
+    padding-top: 2.3rem;
+    padding-bottom: 1.3rem;
+  }
   @include tablet {
     text-align: center;
   }

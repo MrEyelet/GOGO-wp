@@ -2,12 +2,17 @@
   box-sizing: border-box;
 }
 html {
+  // height: 100%;
   font-size: vw(10);
+  background-color: $color-light;
   @include tablet {
     font-size: 10px;
   }
 }
 body {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
   font-family: $base-font;
   font-size: $base-font-size;
   line-height: $base-line-height;
