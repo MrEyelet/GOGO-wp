@@ -1,0 +1,32 @@
+<?php /* Template Name: FrontPage */ ?>
+
+<?php get_header(); ?>
+
+<?php $hero_heading = get_field('hero_heading'); ?>
+<?php $hero_desc = get_field('hero_desc'); ?>
+<?php $section_heading = get_field('section_heading'); ?>
+<?php $section_desc = get_field('section_desc'); ?>
+<?php 
+$args = array( 'post_type' => 'example-cpt', 'posts_per_page' => 10 );
+$the_query = new WP_Query( $args ); 
+?>
+
+
+<article class="theme theme--dark">
+  <section class="section">
+    <?php if($hero_heading) : ?><h1><?php echo $hero_heading; ?></h1><?php endif; ?>
+    <?php if($hero_desc) : ?><p><?php echo $hero_desc; ?></p><?php endif; ?>
+    <?php get_template_part('template_parts/slider'); ?>
+  </section>
+</article>
+<article class="theme theme--light">
+  <section class="section">
+    <h1><?php if($section_heading) : ?><?php echo $section_heading; ?><?php endif; ?></h1>
+    <p><?php if($section_desc) : ?><?php echo $section_desc; ?><?php endif; ?></p>
+    <?php get_template_part('template_parts/container'); ?>
+  </section>
+</article>
+
+<?php get_footer(); ?>
+
+
