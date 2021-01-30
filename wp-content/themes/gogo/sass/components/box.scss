@@ -2,6 +2,14 @@
   width: calc(33.33% - 2rem);
   padding: 3.8rem 2.4rem 6.5rem;
   background-color: $color-white;
+  &--link {
+    text-decoration: none;
+    // transition: all 0.35s ease-in-out;
+    // will-change: transform;
+    // &:hover {
+    //   background-color: $color-ornate;
+    // }
+  }
   &__heading {
     margin-bottom: 1.2rem;
     color: $color-dark;
