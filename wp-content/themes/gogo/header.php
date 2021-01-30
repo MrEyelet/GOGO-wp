@@ -8,6 +8,6 @@
 <body <?php body_class(); ?>>
   <?php $logo = get_field('logo'); ?>
   <header class="header">
-    <img src="<?php header_image(); ?>" alt="logo" />
+    <a href="<?php echo get_option("siteurl"); ?>"><img src="<?php header_image(); ?>" alt="logo" /></a>
   </header>
     <main>
