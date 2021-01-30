@@ -9,6 +9,7 @@ class Slider {
 
   initSlider() {
     this.slider.slick({
+      // infinite: false,
       autoplay: false,
       slidesToShow: 3,
       arrows: true,

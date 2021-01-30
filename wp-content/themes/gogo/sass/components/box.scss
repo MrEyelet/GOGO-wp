@@ -5,11 +5,24 @@
   background-color: $color-white;
   &--link {
     text-decoration: none;
-    // transition: all 0.35s ease-in-out;
-    // will-change: transform;
-    // &:hover {
-    //   background-color: $color-ornate;
-    // }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.5rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $color-ornate;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease-in-out;
+      will-change: transform;
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
   &__heading {
     margin-bottom: 1.2rem;

@@ -3,4 +3,8 @@
   padding-top: 5rem;
   padding-bottom: 6.5rem;
   text-align: center;
+  &__heading,
+  &__desc {
+    will-change: transform, opacity;
+  }
 }
