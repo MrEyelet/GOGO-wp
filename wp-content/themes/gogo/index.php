@@ -1,10 +1,9 @@
-<?php /* Template Name: News */ ?>
-
 <?php get_header(); ?>
 
 <?php 
 $args = array( 'posts_per_page' => 10 );
-$the_query = new WP_Query( $args ); ?>
+$the_query = new WP_Query( $args ); 
+?>
 <article class="theme theme--light">
   <section class="section">
     <?php if ( $the_query->have_posts() ) : ?>

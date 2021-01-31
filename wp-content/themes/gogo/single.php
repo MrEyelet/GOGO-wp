@@ -14,7 +14,7 @@
   <?php endif; ?>
   <section class="section">
     <?php if(get_field('hero_heading')) : ?>
-      <h1 class="section__heading"><?php the_field('hero_heading'); ?></h1>
+      <h1 class="section__heading" ><?php the_field('hero_heading'); ?></h1>
     <?php endif; ?>
     <?php if(get_field('hero_desc')) : ?>
       <p class="section__desc"><?php the_field('hero_desc'); ?></p>
