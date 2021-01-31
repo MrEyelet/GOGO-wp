@@ -33,9 +33,9 @@
     transition: background-color 0.35s ease-in-out;
     &::before {
       content: "";
+      display: inline-block;
       width: 1.3rem;
       height: 2.4rem;
-      position: absolute;
       background-repeat: no-repeat;
       background-size: contain;
     }

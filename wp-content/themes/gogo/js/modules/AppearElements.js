@@ -24,8 +24,8 @@ class AppearElements {
     this.tlShowElements.to(".preloader__outer-circle", { duration: 0.5, opacity: 0, ease: Power4.easeOut }, "=-1.5")
     this.tlShowElements.to(".preloader", { duration: 1.5, x: "-100%", ease: Power4.easeOut }, "=-1")
     this.tlShowElements.from(".section__desc, .section__heading", { duration: 1, y: "25%", opacity: 0, ease: Power1.easeOut }, "=-1.2")
-    this.tlShowElements.from(".slick-active", { duration: 1.5, x: "20%", opacity: 0, stagger: 0.15, ease: Power4.easeOut }, "=-1.2")
-    this.tlShowElements.from(".container .box, .single .container", { duration: 1.5, opacity: 0, x: "20%", stagger: 0.15, ease: Power4.easeOut }, "=-1.7")
+    this.tlShowElements.from(".slick-active, .container__inner--subpage, .container .box", { duration: 1.5, x: "20%", opacity: 0, stagger: 0.15, ease: Power4.easeOut }, "=-1.2")
+    // this.tlShowElements.from(".single .container, .container .box", { duration: 1.5, opacity: 0, x: "20%", stagger: 0.15, ease: Power4.easeOut }, "=-1.7")
     setTimeout(() => {
       this.preloader.remove()
     }, 2500)
