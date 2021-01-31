@@ -1,8 +1,8 @@
 .container {
   &__inner {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 -1.5rem;
     &--subpage {
       display: block;
       padding: 3rem;
@@ -17,7 +17,7 @@
         // width: calc(33.33% - 1.5rem);
       }
       @include portrait {
-        width: calc(50% - 3rem);
+        width: calc(50% - 1.5rem);
         padding: 1.5rem;
         &:nth-of-type(n + 3) {
           margin-top: 3rem;
