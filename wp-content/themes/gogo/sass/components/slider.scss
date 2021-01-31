@@ -4,10 +4,14 @@
   &__slide {
     height: 100%;
   }
+  //slick slider styles
   .slick-slide {
     margin: 0 1.5rem;
     > div {
       height: 100%;
+    }
+    .box {
+      margin: 0;
     }
   }
   .slick-list {
@@ -71,4 +75,5 @@
       right: 0;
     }
   }
+  //slick slider styles
 }
