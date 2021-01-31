@@ -10,6 +10,7 @@ class Transition {
   events() {
     barba.hooks.after(() => {
       window.scrollTo(0, 0)
+
       var slider = new Slider()
     })
     barba.init({

@@ -12,7 +12,6 @@ function gogo_file() {
 add_action('wp_enqueue_scripts', 'gogo_file');
 //
 
-
 //Script modifier
 function gogo_scripts_modifier( $tag, $handle, $src ) {
 	if ( 'poly' === $handle ) {
@@ -74,5 +73,9 @@ function gogo_replace_default_featured_image_meta_box() {
 	add_meta_box('postimagediv', __('Icon image'), 'post_thumbnail_meta_box', 'example-cpt', 'side', 'high');
 }
 add_action( 'admin_head', 'gogo_replace_default_featured_image_meta_box', 100 );
+//
 
+//
+add_filter( 'show_admin_bar', '__return_false' );
 ?>
+
