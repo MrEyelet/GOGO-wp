@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: $over-all;
   background-color: $color_white;
   &__wrapper {
     @include wrapper;

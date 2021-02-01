@@ -2,6 +2,10 @@
   @include wrapper;
   padding-top: 5rem;
   padding-bottom: 6.5rem;
+  @include portrait {
+    padding-top: 2rem;
+    // padding-bottom: 2rem;
+  }
   text-align: center;
   &__heading,
   &__desc {

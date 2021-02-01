@@ -3,4 +3,8 @@
   width: 100%;
   padding: 0 $wrapper-padding;
   margin: 0 auto;
+  @include mobile-lg {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
