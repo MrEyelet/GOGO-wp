@@ -27,10 +27,15 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: $over-content;
     background: none;
     border-radius: 50%;
     border: none;
     transition: background-color 0.35s ease-in-out;
+    @include tablet {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -44,8 +49,7 @@
       height: 2.4rem;
     }
     @include tablet {
-      top: unset;
-      bottom: -7.5rem;
+      background-color: $color-light;
     }
     &:hover {
       cursor: pointer;
@@ -59,7 +63,7 @@
       background-image: url("../img/prev_arrow.svg");
     }
     @include tablet {
-      left: 0;
+      left: -1.5rem;
     }
   }
   .slick-arrow-next {
@@ -69,7 +73,7 @@
       background-image: url("../img/next_arrow.svg");
     }
     @include tablet {
-      right: 0;
+      right: -1.5rem;
     }
   }
   //slick slider styles

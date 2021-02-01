@@ -7,6 +7,7 @@
 	<?php wp_head(); ?>
 </head> 
 <body <?php body_class(); ?> data-barba="wrapper">
+  
   <?php $logo = get_field('logo'); ?>
   <header class="header">
     <div class="header__wrapper">
