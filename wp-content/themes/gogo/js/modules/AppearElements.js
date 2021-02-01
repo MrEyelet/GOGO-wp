@@ -4,7 +4,6 @@ gsap.registerPlugin()
 class AppearElements {
   constructor() {
     this.preloader = document.querySelector(".preloader")
-    this.header = document.querySelector(".header")
     this.tlShowElements = new TimelineMax({})
 
     this.events()
@@ -27,7 +26,6 @@ class AppearElements {
     this.tlShowElements.from(".section__desc, .section__heading", { duration: 1, y: "25%", opacity: 0, ease: Power1.easeOut }, "=-1.2")
     this.tlShowElements.from(".slick-active, .container__inner--subpage, .container .box", { duration: 1.5, x: "20%", opacity: 0, stagger: 0.15, ease: Power4.easeOut }, "=-1.2")
     setTimeout(() => {
-      this.header.classList.add("fixed")
       this.preloader.remove()
     }, 2500)
   }

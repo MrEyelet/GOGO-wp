@@ -1,14 +1,11 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: $over-all;
   background-color: $color_white;
-  &.fixed {
-    position: fixed;
-  }
   &__wrapper {
     @include wrapper;
     max-width: 124rem;
@@ -17,6 +14,7 @@
     padding-bottom: 1.3rem;
   }
   @include tablet {
+    position: absolute;
     text-align: center;
   }
   img {
