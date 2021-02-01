@@ -18,13 +18,14 @@ body {
   font-family: $base-font;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   @include mobile-lg {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
 }
 main {
+  width: 100%;
   position: relative;
   top: 8rem;
   transition: transform 0.35s ease-in-out;

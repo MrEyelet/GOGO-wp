@@ -1,14 +1,18 @@
 .header {
-  min-height: 8rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   z-index: $over-all;
   background-color: $color_white;
+  &.fixed {
+    position: fixed;
+  }
   &__wrapper {
     @include wrapper;
     max-width: 124rem;
+    min-height: 8rem;
     padding-top: 2.3rem;
     padding-bottom: 1.3rem;
   }
