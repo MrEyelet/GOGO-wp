@@ -2,7 +2,7 @@
 //styles and scripts
 function gogo_file() {
 	wp_enqueue_script('poly', 'https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver', NULL, '1.0', true);
-	wp_enqueue_script('main', get_theme_file_uri('js/main-scripts.js'), NULL, '1.0', true);
+	wp_enqueue_script('main', get_theme_file_uri('bundle.js'), NULL, '1.0', true);
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet');
 	wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css',false,'1.1','all');
 	wp_enqueue_style('styles', get_template_directory_uri() . '/css/style.min.css',false,'1.1','all');
