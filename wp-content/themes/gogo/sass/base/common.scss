@@ -23,7 +23,9 @@ body {
   }
 }
 main {
-  margin-top: 8rem;
+  position: relative;
+  top: 8rem;
+  transition: transform 0.35s ease-in-out;
 }
 h1,
 h2,

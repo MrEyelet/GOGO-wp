@@ -9383,33 +9383,51 @@ function _createClass(Constructor, protoProps, staticProps) {
           n.r(e),
             n.d(e, {
               default: function _default() {
-                return s
+                return u
               }
             })
           var i = n(9),
             r = n.n(i),
-            o = n(1)
+            o = n(1),
+            s = n(5),
+            a = n(2),
+            l = n.n(a)
 
-          var s = /*#__PURE__*/ (function () {
-            function s() {
-              _classCallCheck(this, s)
+          var u = /*#__PURE__*/ (function () {
+            function u() {
+              _classCallCheck(this, u)
 
               this.events()
             }
 
-            _createClass(s, [
+            _createClass(u, [
               {
                 key: "events",
                 value: function events() {
-                  r().hooks.after(function () {
-                    new o.default()
+                  r().hooks.afterLeave(function (t) {
+                    var e = t.next.html,
+                      n = e.replace(/(<\/?)body( .+?)?>/gi, "$1notbody$2>", e),
+                      i = l()(n).filter("notbody").attr("class")
+                    l()("body").attr("class", i)
                   }),
+                    r().hooks.after(function () {
+                      window.scrollTo(0, 0)
+                      new o.default()
+                    }),
                     r().init({
                       transitions: [
                         {
-                          name: "default-transition",
-                          leave: function leave() {},
-                          enter: function enter() {}
+                          name: "opacity-transition",
+                          leave: function leave(t) {
+                            return s.gsap.to(t.current.container, {
+                              opacity: 0
+                            })
+                          },
+                          enter: function enter(t) {
+                            return s.gsap.from(t.next.container, {
+                              opacity: 0
+                            })
+                          }
                         }
                       ]
                     })
@@ -9417,7 +9435,7 @@ function _createClass(Constructor, protoProps, staticProps) {
               }
             ])
 
-            return s
+            return u
           })()
         },
         function (t) {

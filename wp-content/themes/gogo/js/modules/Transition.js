@@ -14,9 +14,8 @@ class Transition {
       let response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, "$1notbody$2>", nextHtml)
       let bodyClasses = $(response).filter("notbody").attr("class")
       $("body").attr("class", bodyClasses)
-      // console.log($("body").attr("class", bodyClasses))
     })
-    barba.hooks.after(() => {
+    barba.hooks.beforeEnter(() => {
       window.scrollTo(0, 0)
       var slider = new Slider()
     })
@@ -30,6 +29,7 @@ class Transition {
             })
           },
           enter(data) {
+            data.current.container.remove(data.current.container)
             return gsap.from(data.next.container, {
               opacity: 0
             })
