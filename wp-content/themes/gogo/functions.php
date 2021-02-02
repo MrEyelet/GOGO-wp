@@ -77,5 +77,11 @@ add_action( 'admin_head', 'gogo_replace_default_featured_image_meta_box', 100 );
 
 //
 add_filter( 'show_admin_bar', '__return_false' );
+
+// hide update notifications
+function remove_core_updates(){
+	global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+	}
+	add_filter('pre_site_transient_update_themes','remove_core_updates');
 ?>
 
